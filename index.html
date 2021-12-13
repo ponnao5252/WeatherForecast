@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body id="body">
+    <div id="all">
+      <div id="menu">
+        <!-- <div id="favorite">お気に入り</div> -->
+        <div id="position">
+          <p>都道府県から探す</p>
+          <p class="local">北海道・東北</p>
+          <p class="pre_name">
+            <a class="selectedCityName" data-value="2130037" href="#">北海道</a>
+            <a class="selectedCityName" data-value="2130656" href="#">青森</a>
+            <a class="selectedCityName" data-value="2130656" href="#">岩手</a>
+            <a class="selectedCityName" data-value="2130656" href="#">宮城</a>
+            <a class="selectedCityName" data-value="2130656" href="#">秋田</a>
+            <a class="selectedCityName" data-value="2130656" href="#">山形</a>
+            <a class="selectedCityName" data-value="2130656" href="#">福島</a>
+          </p>
+          <p class="local">関東</p>
+          <p class="pre_name">
+            <a>東京</a>
+            <a>神奈川</a>
+            <a>埼玉</a>
+            <a>千葉</a>
+            <a>茨城</a>
+            <a>栃木</a>
+            <a>群馬</a>
+            <a>山梨</a>
+          </p>
+          <p class="local">信越・北陸</p>
+          <p class="pre_name">
+            <a>新潟</a>
+            <a>長野</a>
+            <a>富山</a>
+            <a>石川</a>
+            <a>福井</a>
+          </p>
+          <p class="local">東海</p>
+          <p class="pre_name">
+            <a>愛知</a>
+            <a>岐阜</a>
+            <a>静岡</a>
+            <a>三重</a>
+          </p>
+          <p class="local">近畿</p>
+          <p class="pre_name">
+            <a>大阪</a>
+            <a>兵庫</a>
+            <a>京都</a>
+            <a>滋賀</a>
+            <a>奈良</a>
+            <a>和歌山</a>
+          </p>
+          <p class="local">中国</p>
+          <p class="pre_name">
+            <a>鳥取</a>
+            <a>島根</a>
+            <a>岡山</a>
+            <a>広島</a>
+            <a>山口</a>
+          </p>
+          <p class="local">四国</p>
+          <p class="pre_name">
+            <a>徳島</a>
+            <a>香川</a>
+            <a>愛媛</a>
+            <a>高知</a>
+          </p>
+          <p class="local">九州</p>
+          <p class="pre_name">
+            <a>福岡</a>
+            <a>佐賀</a>
+            <a>長崎</a>
+            <a>熊本</a>
+            <a>大分</a>
+            <a>宮崎</a>
+            <a>鹿児島</a>
+            <a class="selectedCityName" data-value="1854345" href="#">沖縄</a>
+          </p>
+        </div>
+      </div>
+      <div id="main">
+        <div id="now" class="container">
+          <div id="now_weather" class="box">現在の天気</div>
+          <div id="tempTxt" class="box">気温</div>
+          <div class="box"><img id="weatherIcon" /></div>
+        </div>
+        <!-- <div id="tempTxt"> -->
+        <!-- <div id="hours">
+          ３時間ごとの天気
+        </div>
+        <div id="days">
+          今後の天気
+        </div>
+        <div id="otherInformation">
+          その他の情報
+        </div> -->
+      </div>
+    </div>
+
+    <!-- <div>
+    <select name="selectedCityName" id="selectedCityName">
+      <option value="00">都道府県を選択してください</option>
+      <option value="2130037">北海道</option>
+      <option value="2130656">青森県</option>
+      <option value="2112518">岩手県</option>
+      <option value="2111888">宮城県</option>
+      <option value="2113124">秋田県</option>
+      <option value="2110554">山形県</option>
+      <option value="2112922">福島県</option>
+      <option value="1862033">茨城県</option>
+      <option value="1850310">栃木県</option>
+      <option value="1863501">群馬県</option>
+      <option value="1853226">埼玉県</option>
+      <option value="1815022">千葉県</option>
+      <option value="1850144">東京都</option>
+      <option value="1860291">神奈川県</option>
+      <option value="1855429">新潟県</option>
+      <option value="1849872">富山県</option>
+      <option value="1861387">石川県</option>
+      <option value="1863983">福井県</option>
+      <option value="1848649">山梨県</option>
+      <option value="1856210">長野県</option>
+      <option value="1863640">岐阜県</option>
+      <option value="1851715">静岡県</option>
+      <option value="1865694">愛知県</option>
+      <option value="1857352">三重県</option>
+      <option value="1852553">滋賀県</option>
+      <option value="1857907">京都府</option>
+      <option value="1853909">大阪府</option>
+      <option value="1859171">兵庫県</option>
+      <option value="1855608">奈良県</option>
+      <option value="1848938">和歌山県</option>
+      <option value="1849890">鳥取県</option>
+      <option value="1852442">島根県</option>
+      <option value="1854381">岡山県</option>
+      <option value="1862413">広島県</option>
+      <option value="1848681">山口県</option>
+      <option value="1850157">徳島県</option>
+      <option value="1860834">香川県</option>
+      <option value="1864226">愛媛県</option>
+      <option value="1859133">高知県</option>
+      <option value="1863958">福岡県</option>
+      <option value="1853299">佐賀県</option>
+      <option value="1856156">長崎県</option>
+      <option value="1858419">熊本県</option>
+      <option value="1854484">大分県</option>
+      <option value="1856710">宮崎県</option>
+      <option value="1860825">鹿児島県</option>
+      <option value="1854345">沖縄県</option>
+    </select>
+  </div>
+</div>
+  <div id="main">
+    <div class="sub">
+      <p id="placeTxt"></p>
+    </div>
+    <div class="sub">
+      <p id="weatherTxt"></p>
+    </div>
+    <div class="sub">
+      <p id="tempTxt"></p>
+    </div>
+  </div>
+  <div class="btn-group" role="group"> -->
+    <script src="main.js"></script>
+  </body>
+</html>

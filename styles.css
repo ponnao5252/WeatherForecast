@@ -1,0 +1,90 @@
+body {
+  /* background-image: url(image/top.jpg); */
+  /* background-size: cover; */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+
+div {
+  text-align: center;
+  margin: auto;
+}
+
+#all {
+  display: flex;
+}
+
+#menu {
+  /* background-color: chartreuse; */
+  width: 20%;
+  height: 100vh;
+}
+
+#main {
+  /* background-color: cadetblue; */
+  width: 80%;
+  height: 100vh;
+  background-image: url(image/top.jpg);
+}
+.container{
+  display: block;
+  justify-content: center;
+  background: #ccc;
+  flex-wrap: wrap;
+}
+
+/* #favorite {
+  background-color: chocolate;
+  height: 20vh;
+} */
+#position {
+  /* background-color: sandybrown; */
+  height: 100vh;
+}
+
+#now {
+  background-color: seashell;
+  height: 100vh;
+}
+
+#now_weather #tempTxt #weatherIcon {
+  margin: auto;
+  vertical-align: middle;
+}
+/* #hours {
+   background-color: aqua;
+   height: 20vh;
+ }
+ #days {
+   background-color: blueviolet;
+   height: 40vh;
+ }
+ #otherInformation {
+   background-color: skyblue;
+   height: 20vh;
+ } */
+
+.pre_name {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.local {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1px;
+}
+
+#now {
+  font-size: 25px;
+}
